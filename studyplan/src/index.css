@@ -1,0 +1,113 @@
+/* src/index.css */
+:root {
+  --font: 'Sora', sans-serif;
+  --font-display: 'DM Serif Display', serif;
+
+  --bg: #f5f3ef;
+  --bg2: #eceae5;
+  --bg3: #ffffff;
+  --surface: #ffffff;
+  --surface2: #f9f8f6;
+
+  --text: #1a1814;
+  --text2: #5c5750;
+  --text3: #9e9890;
+
+  --border: rgba(0,0,0,0.08);
+  --border2: rgba(0,0,0,0.14);
+
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --accent-light: #eef2ff;
+  --accent-text: #3730a3;
+
+  --green: #22c55e;
+  --green-light: #f0fdf4;
+  --green-text: #166534;
+
+  --red: #ef4444;
+  --red-light: #fef2f2;
+  --red-text: #991b1b;
+
+  --amber: #f59e0b;
+  --amber-light: #fffbeb;
+  --amber-text: #92400e;
+
+  --radius: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111010;
+    --bg2: #1a1918;
+    --bg3: #222120;
+    --surface: #1e1d1c;
+    --surface2: #252422;
+
+    --text: #f0ede8;
+    --text2: #a09890;
+    --text3: #6b6560;
+
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.12);
+
+    --accent-light: #1e1d3f;
+    --accent-text: #a5b4fc;
+
+    --green-light: #0d1f13;
+    --green-text: #86efac;
+
+    --red-light: #1f0d0d;
+    --red-text: #fca5a5;
+
+    --amber-light: #1f1a0d;
+    --amber-text: #fcd34d;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0 }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { min-height: 100vh }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px }
+::-webkit-scrollbar-track { background: transparent }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 9px }
+
+/* Inputs */
+input, select, textarea {
+  font-family: var(--font);
+  font-size: 13px;
+  color: var(--text);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 11px;
+  outline: none;
+  width: 100%;
+  transition: border-color .15s, box-shadow .15s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.12);
+}
+textarea { resize: vertical; min-height: 64px }
+select { cursor: pointer }
+
+/* Buttons */
+button { font-family: var(--font); cursor: pointer; transition: all .15s }
